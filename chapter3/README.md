@@ -44,6 +44,35 @@ owg-opentelemetry-collector-6b8fdddc9d-4tsj5   1/1     Running   0          2s
 1. Install the OpenTelemetry Demo Application
 ```console
 helm install --version '0.26.0' --values OTEL-Demo.yaml owg-demo open-telemetry/opentelemetry-demo
+
+NAME: owg-demo
+LAST DEPLOYED: Sat Jan 18 03:04:34 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+=======================================================================================
+
+
+ ██████╗ ████████╗███████╗██╗         ██████╗ ███████╗███╗   ███╗ ██████╗
+██╔═══██╗╚══██╔══╝██╔════╝██║         ██╔══██╗██╔════╝████╗ ████║██╔═══██╗
+██║   ██║   ██║   █████╗  ██║         ██║  ██║█████╗  ██╔████╔██║██║   ██║
+██║   ██║   ██║   ██╔══╝  ██║         ██║  ██║██╔══╝  ██║╚██╔╝██║██║   ██║
+╚██████╔╝   ██║   ███████╗███████╗    ██████╔╝███████╗██║ ╚═╝ ██║╚██████╔╝
+ ╚═════╝    ╚═╝   ╚══════╝╚══════╝    ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝
+
+
+- All services are available via the Frontend proxy: http://localhost:8080
+  by running these commands:
+     kubectl --namespace default port-forward svc/owg-demo-frontendproxy 8080:8080
+
+  The following services are available at these paths once the proxy is exposed:
+  Webstore             http://localhost:8080/
+  Grafana              http://localhost:8080/grafana/
+  Feature Flags UI     http://localhost:8080/feature/
+  Load Generator UI    http://localhost:8080/loadgen/
+  Jaeger UI            http://localhost:8080/jaeger/ui/
 ```
 
 2. Validate the applications are running
