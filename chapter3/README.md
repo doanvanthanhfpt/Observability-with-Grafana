@@ -43,7 +43,7 @@ owg-opentelemetry-collector-6b8fdddc9d-4tsj5   1/1     Running   0          2s
 
 1. Install the OpenTelemetry Demo Application
 ```console
-helm install --version '0.26.0' --values Otel-demo.yaml owg-demo open-telemetry/opentelemetry-demo
+helm install --version '0.26.0' --values OTEL-Demo.yaml owg-demo open-telemetry/opentelemetry-demo
 ```
 
 2. Validate the applications are running
