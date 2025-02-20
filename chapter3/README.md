@@ -117,50 +117,50 @@ In your browser head to (http://localhost:8080)
 #### Some notes for troubleshooting
 
 1. Find the Namespace with helm
-```console
-helm list --all --all-namespaces
-```
+   ```console
+   helm list --all --all-namespaces
+   ```
 
 2. Delete the Release by namespace with helm
-```console
-helm delete owg-demo -n <namespace>
-```
-for example, delete release "owg-demo" in a specific namespace "default":
-```console
-helm delete owg-demo -n default
-```
+   ```console
+   helm delete owg-demo -n <namespace>
+   ```
+   for example, delete release "owg-demo" in a specific namespace "default":
+   ```console
+   helm delete owg-demo -n default
+   ```
 
 3. Verify running Pods from installation
-```console
-kubectl get pods --all-namespaces
-```
-or without --all-namespaces parameter to exclude namespace "kube-system"
-```console
-kubectl get pods
-```
+   ```console
+   kubectl get pods --all-namespaces
+   ```
+   or without --all-namespaces parameter to exclude namespace "kube-system"
+   ```console
+   kubectl get pods
+   ```
 
 4. Stop Pods in a Specific Namespace
-```console
-kubectl delete pods --all -n <namespace>
-```
-for example, to stop Pods in a Specific Namespace "default":
-```console
-kubectl delete pods --all -n default
-```
+   ```console
+   kubectl delete pods --all -n <namespace>
+   ```
+   for example, to stop Pods in a Specific Namespace "default":
+   ```console
+   kubectl delete pods --all -n default
+   ```
 
 5. Scale Down Deployments/StatefulSets to Stop Pods
-```console
-kubectl scale deployment --all --replicas=0 --all-namespaces
-```
+   ```console
+   kubectl scale deployment --all --replicas=0 --all-namespaces
+   ```
 
 6. Scale Up Deployments/StatefulSets to Start Pods
-```console
-kubectl scale deployment --all --replicas=1 --all-namespaces
-```
-🔹 Explanation:
---all            → Apply to all deployments
---replicas=1     → Set 1 pod per deployment
---all-namespaces → Apply across all namespaces
+   ```console
+   kubectl scale deployment --all --replicas=1 --all-namespaces
+   ```
+   🔹 Explanation:
+   --all            → Apply to all deployments
+   --replicas=1     → Set 1 pod per deployment
+   --all-namespaces → Apply across all namespaces
 
 7. To kill a process that combined with a sepcific port
  - Specify port combined PID to kill
