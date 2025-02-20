@@ -80,7 +80,9 @@ NOTES:
 2. Validate the applications are running
 ```console
 kubectl get pods --selector=app.kubernetes.io/instance=owg-demo
-
+```
+The output look like below
+```console
 NAME                                              READY   STATUS    RESTARTS   AGE
 owg-demo-emailservice-68d874d8dc-xf2lv            1/1     Running   0          5m
 owg-demo-frontendproxy-7f647bccf9-fdf8t           1/1     Running   0          5m
