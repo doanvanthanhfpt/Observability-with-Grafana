@@ -118,6 +118,7 @@ kubectl port-forward svc/owg-opentelemetry-collector 4318:4318 &
 5. Check access to the OpenTelemetry Demo application
 In your browser head to (http://localhost:8080)
 
+
 #### Some notes for troubleshooting
 
 1. Find the Namespace with helm
@@ -154,8 +155,9 @@ In your browser head to (http://localhost:8080)
 
 5. Scale Down Deployments/StatefulSets to Stop Pods
    ```console
-   kubectl scale deployment --all --replicas=0 --all-namespaces
+   kubectl scale deployment --all --replicas=0 -n <namespace>
    ```
+   for example: "kubectl scale deployment --all --replicas=0 -n default" stop by scaling down Pods to zero 
 
 6. Scale Up Deployments/StatefulSets to Start Pods
    ```console
