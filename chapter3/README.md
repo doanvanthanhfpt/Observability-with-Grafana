@@ -44,6 +44,8 @@ owg-opentelemetry-collector-6b8fdddc9d-4tsj5   1/1     Running   0          2s
 1. Install the OpenTelemetry Demo Application
 ```console
 helm install --version '0.26.0' --values OTEL-Demo.yaml owg-demo open-telemetry/opentelemetry-demo
+```
+- The output look like bellow:
 
 NAME: owg-demo
 LAST DEPLOYED: Sat Jan 18 03:04:34 2025
@@ -73,7 +75,7 @@ NOTES:
   Feature Flags UI     http://localhost:8080/feature/
   Load Generator UI    http://localhost:8080/loadgen/
   Jaeger UI            http://localhost:8080/jaeger/ui/
-```
+
 
 2. Validate the applications are running
 ```console
