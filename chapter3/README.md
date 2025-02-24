@@ -106,10 +106,6 @@ owg-demo-accountingservice-8596699678-8t88f       1/1     Running   0          5
 owg-demo-checkoutservice-7585d7d45f-zgrpp         1/1     Running   0          5m
 owg-demo-frauddetectionservice-555bcff644-b6ktm   1/1     Running   0          5m
 ```
-Validate the URL with are running
-```console
-curl -I http://localhost:8080
-```
 
 3. Open port for frontendproxy access
 ```console
@@ -123,6 +119,11 @@ kubectl port-forward svc/owg-opentelemetry-collector 4318:4318 &
 
 5. Check access to the OpenTelemetry Demo application
 In your browser head to (http://localhost:8080)
+
+Validate the URL with are running
+```console
+curl -I http://localhost:8080
+```
 
 
 #### Some notes for troubleshooting
