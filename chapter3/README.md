@@ -34,7 +34,9 @@ helm install --version '0.73.1' --values chapter3/OTEL-Collector.yaml --values O
 3. Validate the installation is running
 ```console
 kubectl get pods
-
+```
+The output look like:
+```console
 NAME                                           READY   STATUS    RESTARTS   AGE
 owg-opentelemetry-collector-6b8fdddc9d-4tsj5   1/1     Running   0          2s
 ```
@@ -103,6 +105,10 @@ owg-demo-featureflagservice-7847d8f7f7-7hnrq      1/1     Running   0          5
 owg-demo-accountingservice-8596699678-8t88f       1/1     Running   0          5m
 owg-demo-checkoutservice-7585d7d45f-zgrpp         1/1     Running   0          5m
 owg-demo-frauddetectionservice-555bcff644-b6ktm   1/1     Running   0          5m
+```
+Validate the URL with are running
+```console
+curl -I http://localhost:8080
 ```
 
 3. Open port for frontendproxy access
