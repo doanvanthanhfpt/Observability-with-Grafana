@@ -26,10 +26,14 @@ Endpoint will look similar to these
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
 ```
 
-2. Install the OpenTelemetry Collector
-```console
-helm install --version '0.73.1' --values chapter3/OTEL-Collector.yaml --values OTEL-Creds.yaml owg open-telemetry/opentelemetry-collector
-```
+2. Install owg OpenTelemetry Collector
+   ```console
+   helm install --version '0.73.1' --values chapter3/OTEL-Collector.yaml --values OTEL-Creds.yaml owg open-telemetry/opentelemetry-collector
+   ```
+   Uninstall owg OpenTelemetry Collector
+   ```console
+   helm uninstall owg
+   ```
 
 3. Validate the installation is running
 ```console
